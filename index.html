@@ -3,69 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0c0d13">
-  <meta name="description" content="Помойка Дроп – мемный симулятор кейсов, апгрейдов и крайне сомнительных коллекций. Только игровая валюта.">
-  <title>Помойка DROP – легендарный мусор</title>
+  <meta name="theme-color" content="#0a0a0e">
+  <meta name="description" content="Помойка DROP – открытие мемных кейсов, виртуальные коллекции, апгрейд и коллекционный интернет-абсурд.">
+  <title>Помойка DROP – коллекция легендарного мусора</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/cases/42.webp" as="image">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="notice"><div class="wrap notice-inner"><span class="notice-dot"></span><span>ПАРОДИЙНЫЙ СИМУЛЯТОР</span><span class="notice-separator">•</span><span>Никаких реальных денег, депозитов и вывода скинов</span><span class="notice-right">v0.1 / первый макет</span></div></div>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#cases" data-go="cases" aria-label="Помойка Дроп – на главную"><span class="brand-mark"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M10 11h16l-1.5 18H11.5L10 11Z" fill="#10111b" stroke="#10111b" stroke-width="2" stroke-linejoin="round"/><path d="M8 9h20M14 6h8" stroke="#10111b" stroke-width="3" stroke-linecap="round"/><path d="m17 17 4 3-4 3" stroke="#bd9eff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-text">ПОМОЙКА<span>DROP</span></span></a>
-      <nav class="desktop-nav" aria-label="Главная навигация">
-        <button type="button" class="nav-link active" data-go="cases">Кейсы</button>
-        <button type="button" class="nav-link" data-go="upgrade">Апгрейд</button>
-        <button type="button" class="nav-link" data-go="inventory">Инвентарь <span id="inventory-counter" class="nav-mini">0</span></button>
-        <button type="button" class="nav-link" data-go="collections">Коллекции</button>
+      <a class="brand" href="#cases" data-go="cases" aria-label="Помойка DROP, главная">
+        <span class="brand-crown"><svg viewBox="0 0 40 35" fill="none" aria-hidden="true"><path d="M3 8 12 17 20 3 28 17 37 8 33 29H7L3 8Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M9 33h23" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+        <span class="brand-text">Помойка <strong>DROP</strong></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Навигация">
+        <button type="button" class="nav-link active" data-go="cases"><span class="nav-symbol">▱</span> Кейсы</button>
+        <button type="button" class="nav-link" data-go="upgrade"><span class="nav-symbol">↗</span> Апгрейд</button>
+        <button type="button" class="nav-link" data-go="inventory"><span class="nav-symbol">▣</span> Инвентарь <span id="inventory-counter" class="nav-mini">0</span></button>
+        <button type="button" class="nav-link" data-go="collections"><span class="nav-symbol">◇</span> Коллекции</button>
       </nav>
       <div class="header-actions">
-        <button type="button" class="stream-toggle" id="stream-toggle" aria-pressed="false" title="Настройки режима стримера"><span class="red-dot"></span><span class="stream-name">Стример</span></button>
-        <div class="balance" title="Виртуальные помойкоины"><span class="balance-icon">₽̸</span><span id="balance-value">1 500</span></div>
-        <button class="icon-button settings-button" type="button" id="open-settings" aria-label="Настройки и сохранения"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.86l.08.08-2 2-.08-.08a1.7 1.7 0 0 0-1.85-.35 1.7 1.7 0 0 0-1.06 1.58V20.3h-2.8v-.21a1.7 1.7 0 0 0-1.05-1.58 1.7 1.7 0 0 0-1.86.35l-.08.08-2-2 .08-.08A1.7 1.7 0 0 0 7.56 15 1.7 1.7 0 0 0 6 13.95h-.23v-2.8H6A1.7 1.7 0 0 0 7.56 10.1a1.7 1.7 0 0 0-.35-1.86l-.08-.08 2-2 .08.08a1.7 1.7 0 0 0 1.85.35 1.7 1.7 0 0 0 1.06-1.58V4.8h2.8v.21a1.7 1.7 0 0 0 1.05 1.58 1.7 1.7 0 0 0 1.86-.35l.08-.08 2 2-.08.08a1.7 1.7 0 0 0-.35 1.85 1.7 1.7 0 0 0 1.58 1.06h.21v2.8h-.21A1.7 1.7 0 0 0 19.4 15Z" transform="translate(-1.3 -0.5) scale(.95)"/></svg></button>
+        <button type="button" class="stream-toggle" id="stream-toggle" aria-pressed="false" title="Панель режима стримера"><span class="stream-light"></span><span>Стример</span></button>
+        <div class="balance" aria-label="Баланс игровой валюты"><span class="balance-icon">₽</span><span id="balance-value">1 500</span></div>
+        <button class="header-bonus" id="header-bonus" type="button" data-daily="1">Бонус дня</button>
+        <button class="icon-button settings-button" id="open-settings" type="button" aria-label="Настройки"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m12 2 1.8 2.6 3.1-.2.9 3 2.9 1.3-.7 3.3.7 3.2-2.9 1.3-.9 3-3.1-.2L12 22l-1.8-2.7-3.1.2-.9-3-2.9-1.3.7-3.2-.7-3.3 2.9-1.3.9-3 3.1.2L12 2Z"/></svg></button>
       </div>
     </div>
   </header>
-  <main id="main-content" class="wrap">
+  <div class="drop-strip" aria-label="Примеры предметов каталога"><div class="wrap drop-strip-inner"><span class="drop-strip-label"><span class="live-dot"></span> В КОЛЛЕКЦИИ</span><div id="preview-drop-list" class="preview-drop-list"></div></div></div>
+  <main id="main-content">
     <section id="page-cases" class="page is-visible" aria-label="Кейсы">
-      <div class="hero">
-        <div class="hero-noise" aria-hidden="true"></div>
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-line"></span> ГЛАВНАЯ ПОМОЙКА РУНЕТА</div>
-          <h1>ЛЕГЕНДАРНЫЙ <span>МУСОР.</span><br><em>СОМНИТЕЛЬНАЯ</em> ЦЕННОСТЬ.</h1>
-          <p>Открывай мемные кейсы. Собирай бананы, числа, дефолты и прочие культурные ценности. Апгрейдни 42 в газовую турбину. Не задавай вопросов.</p>
-          <div class="hero-buttons"><button class="btn btn-primary" type="button" id="hero-open-daily">Забрать бесплатный кейс <span aria-hidden="true">↗</span></button><button class="btn btn-ghost" type="button" data-scroll="case-section">Смотреть кейсы <span aria-hidden="true">↓</span></button></div>
-          <div class="hero-stats"><div><strong id="hero-item-count">0</strong><small>мемных наград</small></div><div><strong id="hero-collection-count">0</strong><small>коллекций</small></div><div><strong>0 ₽</strong><small>реальных депозитов</small></div></div>
+      <section class="hero">
+        <div class="hero-surface"></div><div class="wrap hero-inner">
+          <div class="hero-copy">
+            <div class="hero-eyebrow"><span class="small-diamond"></span> КОЛЛЕКЦИЯ ИНТЕРНЕТ-ЛЕГЕНД</div>
+            <h1>Открывай<br><em>легендарный мусор.</em></h1>
+            <p>Самый серьёзный подход к совершенно несерьёзным вещам. От банана и числа 42 до редчайших мемов и легендарных скинов.</p>
+            <div class="hero-actions"><button class="btn btn-primary" type="button" data-scroll="case-section">Открыть кейсы <span aria-hidden="true">↗</span></button><button class="btn btn-secondary" type="button" id="hero-open-daily">Бесплатный кейс</button></div>
+            <div class="hero-facts"><span><i></i><strong id="hero-item-count">0</strong> наград</span><span><i></i><strong id="hero-collection-count">0</strong> коллекций</span><span><i></i> Только игровая валюта</span></div>
+          </div>
+          <div class="hero-showpiece"><div class="hero-beam"></div><div class="hero-emblem">42</div><div class="hero-platform"></div><img src="assets/cases/42.webp" class="hero-case-image" width="507" height="660" alt="Коллекционный кейс 42"></div>
         </div>
-        <div class="hero-art" aria-hidden="true"><div class="hero-halo"></div><div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div><div class="hero-token hero-token-one">42</div><div class="hero-token hero-token-two">🍌</div><div class="hero-token hero-token-three">📉</div><div class="hero-case"><span class="hero-case-seam"></span><span class="hero-case-label">POMOYKA<br>DROP</span><span class="hero-case-detail">ХРАНИТЬ В ТЁМНОМ МЕСТЕ</span><span class="hero-case-code">№ 000042</span></div><div class="hero-sticker">100% МЕМЫ<br><span>0% СМЫСЛ</span></div></div>
-      </div>
-      <section class="daily-banner" id="daily-banner"><div class="daily-visual">🎁</div><div><div class="banner-kicker">ЕЖЕДНЕВНАЯ ПОМОЙКА</div><h2>Твой бесплатный мусор уже ждёт.</h2><p id="daily-status-text">Один бесплатный кейс каждые 24 часа. Без подписок и СМС.</p></div><button class="btn btn-light" type="button" id="daily-banner-button">Открыть бесплатно <span>↗</span></button></section>
-      <section class="showcase-section" id="case-section">
-        <div class="section-title-row"><div><div class="eyebrow dim">ВЫБЕРИ СВОЮ ВСЕЛЕННУЮ</div><h2 class="section-title">МЕМНЫЕ <span>КЕЙСЫ</span></h2></div><span class="section-side-note">От банана до абсолютного абсурда</span></div>
+      </section>
+      <section class="wrap showcase-section" id="case-section">
+        <div class="section-title-row"><div><div class="section-overline">ТЕМАТИЧЕСКИЕ КОЛЛЕКЦИИ</div><h2 class="section-title">Популярные <span>кейсы</span></h2></div><span class="section-side-note">Найди то, чего никогда не искал</span></div>
         <div class="filter-row" id="case-filters" role="group" aria-label="Категории кейсов"></div>
         <div class="case-grid" id="case-grid"></div>
       </section>
-      <div class="principles"><div class="principle"><span>01 /</span><strong>Любая вещь – предмет</strong><p>Число 42, банан, скин, турбина или просто красная надпись.</p></div><div class="principle"><span>02 /</span><strong>Прогресс сохраняется</strong><p>Инвентарь, баланс и статистика остаются в этом браузере.</p></div><div class="principle"><span>03 /</span><strong>Никакой настоящей лудки</strong><p>Исключительно виртуальные помойкоины. Вывода в Steam нет.</p></div></div>
+      <section class="wrap below-showcase">
+        <div class="daily-banner" id="daily-banner"><div class="daily-render"><img src="assets/cases/daily.svg" alt="Ежедневный кейс" loading="lazy"></div><div class="daily-copy"><div class="section-overline">ЕЖЕДНЕВНАЯ НАГРАДА</div><h2>Подарок каждый день</h2><p id="daily-status-text">Бесплатное открытие раз в календарный день.</p></div><button class="btn btn-primary" type="button" id="daily-banner-button">Открыть бесплатно</button></div>
+        <div class="streamer-banner"><div class="streamer-mark"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><rect x="12" y="12" width="76" height="76" rx="19" stroke="currentColor" stroke-width="3"/><path d="M29 44 42 55 51 32 61 55 76 44l-6 23H35l-6-23Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></div><div><div class="section-overline">СПЕЦИАЛЬНЫЙ РЕЖИМ</div><h2>Стример-панель</h2><p>Режиссируй собственную «абсолютно случайную» удачу. Открытая пародия на подкрутку.</p></div><button class="btn btn-purple" type="button" data-stream-panel="1">Настроить режим <span aria-hidden="true">↗</span></button></div>
+      </section>
     </section>
-    <section id="page-upgrade" class="page" aria-label="Апгрейд">
-      <div class="page-heading"><div class="eyebrow dim">ИСКУССТВО НЕВЫГОДНОГО ОБМЕНА</div><h1 class="section-title">АПГРЕЙД <span>МУСОРА</span></h1><p>Выбирай вещь из инвентаря и пытайся получить что-то подороже. При неудаче исходный предмет исчезнет. Никаких реальных ставок.</p></div>
-      <div id="upgrade-content"></div>
-    </section>
-    <section id="page-inventory" class="page" aria-label="Инвентарь">
-      <div class="page-heading"><div class="eyebrow dim">ТВОЁ СОСТОЯНИЕ</div><h1 class="section-title">ИНВЕНТАРЬ <span>МЕЧТЫ</span></h1><p>У каждого предмета есть игровая стоимость. Продажа пополняет баланс, но не несёт никакой реальной ценности.</p></div>
-      <div id="inventory-content"></div>
-    </section>
-    <section id="page-collections" class="page" aria-label="Коллекции">
-      <div class="page-heading"><div class="eyebrow dim">МУЗЕЙ СОМНИТЕЛЬНОЙ КУЛЬТУРЫ</div><h1 class="section-title">КАТАЛОГ <span>МЕМОВ</span></h1><p>Все предметы и отсылки проекта. Часть из них существуют как простые числа, фразы или абстрактные явления – не обязательно как скины CS2.</p></div>
-      <div id="collections-content"></div>
-    </section>
+    <section id="page-upgrade" class="page wrap subpage" aria-label="Апгрейд"><div class="page-heading"><div class="section-overline">ПОВЫСИТЬ СТАВКИ, НЕ ВЫХОДЯ ИЗ БРАУЗЕРА</div><h1 class="section-title">Апгрейд <span>предметов</span></h1><p>Выбери предмет из инвентаря и цель. Более дорогая награда означает меньший шанс. Все предметы и цены виртуальные.</p></div><div id="upgrade-content"></div></section>
+    <section id="page-inventory" class="page wrap subpage" aria-label="Инвентарь"><div class="page-heading"><div class="section-overline">ТВОЯ КОЛЛЕКЦИЯ</div><h1 class="section-title">Мой <span>инвентарь</span></h1><p>Здесь хранятся полученные предметы. Их можно коллекционировать, использовать для апгрейда или продать за игровую валюту.</p></div><div id="inventory-content"></div></section>
+    <section id="page-collections" class="page wrap subpage" aria-label="Коллекции"><div class="page-heading"><div class="section-overline">МУЗЕЙ ИНТЕРНЕТ-КУЛЬТУРЫ</div><h1 class="section-title">Все <span>награды</span></h1><p>Здесь есть персонажи, мемы, бананы, числа, абстрактные явления и немного CS2. Каждая редкость имеет свою стоимость.</p></div><div id="collections-content"></div></section>
   </main>
-  <footer class="footer"><div class="wrap footer-inner"><div><div class="brand footer-brand"><span class="brand-mark small">▥</span><span class="brand-text">ПОМОЙКА<span>DROP</span></span></div><p>Вымышленная коллекционная игра. Не связана с Valve, Steam, упомянутыми блогерами или платформами кейсов.</p></div><div class="footer-right"><span>Сделано ради мемов, а не депозитов.</span><span>© 2026 / демоверсия 0.1</span></div></div></footer>
-  <nav class="mobile-nav" aria-label="Мобильная навигация"><button data-go="cases" type="button" class="active"><span>▦</span>Кейсы</button><button data-go="upgrade" type="button"><span>↗</span>Апгрейд</button><button data-go="inventory" type="button"><span>▤</span>Инвентарь</button><button data-go="collections" type="button"><span>◈</span>Каталог</button></nav>
-  <div id="modal-root" aria-live="polite"></div>
-  <div id="toast-stack" role="status" aria-live="polite" aria-atomic="true"></div>
-  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <footer class="footer"><div class="wrap footer-inner"><div class="footer-logo">Помойка <strong>DROP</strong><span class="footer-small">© 2026</span></div><p>Независимая пародийная браузерная игра. Только виртуальная валюта; реальные платежи, вывод предметов и интеграция со Steam отсутствуют. Проект не связан с Valve и упомянутыми авторами.</p><button type="button" class="footer-settings" id="footer-settings">Настройки и сохранения</button></div></footer>
+  <nav class="mobile-nav" aria-label="Мобильная навигация"><button data-go="cases" type="button" class="active"><span>▱</span>Кейсы</button><button data-go="upgrade" type="button"><span>↗</span>Апгрейд</button><button data-go="inventory" type="button"><span>▣</span>Инвентарь</button><button data-go="collections" type="button"><span>◇</span>Каталог</button></nav>
+  <div id="modal-root" aria-live="polite"></div><div id="toast-stack" role="status" aria-live="polite"></div><input type="file" id="import-file" accept="application/json,.json" hidden>
 </body>
 </html>

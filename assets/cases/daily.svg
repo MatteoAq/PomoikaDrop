@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 600" role="img" aria-label="ЕЖЕДНЕВНЫЙ">
+ <defs><linearGradient id="body" x1=".05" y1="0" x2=".95" y2="1"><stop stop-color="#45474f"/><stop offset=".4" stop-color="#12151b"/><stop offset="1" stop-color="#08090d"/></linearGradient><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9e2a1"/><stop offset=".18" stop-color="#bd9557"/><stop offset=".47" stop-color="#ffe6a5"/><stop offset=".72" stop-color="#9e6b2b"/><stop offset="1" stop-color="#eec979"/></linearGradient><linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b5a3fc" stop-opacity=".4"/><stop offset="1" stop-color="#111117"/></linearGradient><filter id="shadow" x="-40%" y="-40%" width="180%" height="200%"><feGaussianBlur stdDeviation="20"/></filter></defs>
+ <ellipse cx="326" cy="540" rx="242" ry="26" fill="#b5a3fc" opacity=".27" filter="url(#shadow)"/>
+ <path d="M73 199 206 122 544 157 581 226 545 455 423 523 88 468Z" fill="url(#body)" stroke="#8c7152" stroke-width="5"/>
+ <path d="M73 199 207 125 540 155 408 234Z" fill="#46434a" stroke="url(#metal)" stroke-width="9"/>
+ <path d="M407 235 544 156 581 228 545 456 423 522Z" fill="#161821" stroke="#c29a60" stroke-width="6"/>
+ <path d="M75 202 407 235 422 522 86 469Z" fill="url(#panel)" stroke="url(#metal)" stroke-width="7"/>
+ <path d="M80 270 408 305 412 334 82 298Z" fill="#181921" stroke="url(#metal)" stroke-width="6"/>
+ <path d="M80 433 419 474" fill="none" stroke="url(#metal)" stroke-width="13"/>
+ <path d="M125 180 441 213" fill="none" stroke="#c6a571" stroke-width="8"/>
+ <path d="M129 262v58h50v-55M334 290v58h49v-55" fill="#18191b" stroke="url(#metal)" stroke-width="8"/>
+ <rect x="143" y="263" width="23" height="65" rx="6" fill="url(#metal)"/><rect x="348" y="291" width="22" height="65" rx="6" fill="url(#metal)"/>
+ <path d="M118 360 373 390" stroke="#b5a3fc" stroke-opacity=".65" stroke-width="2"/>
+ <g transform="translate(246 176) rotate(6)"><circle r="29" fill="#13151a" stroke="url(#metal)" stroke-width="7"/><text y="12" font-size="35" font-family="Arial" text-anchor="middle" font-weight="900" fill="url(#metal)">✓</text></g>
+ <text x="247" y="379" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="900" letter-spacing="1" fill="#fae6b6">ЕЖЕДНЕВНЫЙ</text>
+ <text x="245" y="411" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="4" fill="#b5a3fc">БЕСПЛАТНЫЙ КЕЙС</text>
+ <path d="M123 450 374 479" stroke="#b5a3fc" stroke-width="4" stroke-dasharray="9 8"/>
+ </svg>
